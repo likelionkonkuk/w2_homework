@@ -43,8 +43,73 @@ end
 
 #메소드 주석 (여기부터 메소드를 작성하세요.)
 def cheers
-  puts "beers! yeah!"
+	#마실 것을 출력하는 메소드
+	puts "What do you want to drink?"
+	drink = gets.chomp;
+	puts "#{drink}! yeah!"
 end
+
+def Hello
+	#이름 붙여서 인사해주는 메소드
+  name = gets.chomp
+  puts "Hello, #{name}"
+end
+
+def putKey
+	#숫자 네 개를 입력하면 각자 번호를 매겨주는 메소드
+
+	arr = [];
+
+	puts "Enter 4 integers: "
+	for i in 0..4
+ 		arr[i] = gets.chomp
+ 	end
+
+	hash = Hash.new
+
+	for i in 1..4
+	    hash[i] = arr[i - 1]
+	end
+
+	puts hash
+
+end
+
+def hand_shake
+	#몇 명인지 입력하면 몇번 악수하는지 알아내는 메소드
+	puts "How many people in there?(puts integers)"
+
+	n = gets.chomp;
+
+	for i in 1..(n-1)
+		sum += i
+	end
+
+	puts "There will be " + i + " times hand-shaking."
+end
+
+def WhoIsMafia
+	#랜덤으로 마피아를 지정해서 고른 사람이 마피아인지 알아내는 메소드
+	arr = [];
+
+	for i in 0..4
+		arr[i] = rand(10);
+	end
+
+	puts "You are the police."
+	puts "There is 5 persons."
+	puts "Say #(integers) of person who you want to check."
+
+	number = gets.chomp;
+
+	if arr[number] <= 2
+		puts "Mafia"
+	else
+		puts "Citizen"
+	end
+end
+		
+
 #여기 이 두 주석 사이에 메소드를 작성하시면 됩니다~
 
 puts "==================================="
