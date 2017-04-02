@@ -42,8 +42,99 @@ def miyeon_length   #배열이나 문자열의 길이를 측정하는 메소드
 end
 
 #메소드 주석 (여기부터 메소드를 작성하세요.)
-def cheers
-  puts "beers! yeah!"
+def upcase
+  shin = "critical"
+  puts shin.upcase  #문자열을 대문자로 바꾸어줌.
+end
+
+def downcase
+  shin = "CRITICAL"
+  puts shin.downcase #문자열을 소문자로 바꾸어줌.
+end
+
+def length
+  shin = "critical"
+  puts shin.length #문자열의 길이를 알려준다.
+end
+
+def reverse
+  shin = "critical"
+  puts shin.reverse #문자열을 뒤집어준다.
+end
+
+def capitalize
+  shin = "critical"
+  puts shin.capitalize
+end
+
+def include?
+  shin = "critical"
+  puts shin.include? "" #""안에 문자를 포함하는지 아닌지를 boolean값으로 알려준다.
+end
+
+def gsub
+  shin = "critical"
+  puts shin.gsub(//,"") #//안에있는 문자가 shin안에 있다면 ""문자로 바꾸어준다.
+end
+
+def spilt
+  shin = "cri tial"
+  puts shin.spilt #문자를 띄어쓰기 전후로 분리하여 배열로 만들어준다.
+end
+
+def select
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.select{|x|x==i} #shin에서 select조건에 맞는 것을 출력함.
+end
+
+def reject
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.reject{|x|x==i} #shin에서 reject조건에 맞는 것은 출력하지 않음.
+end
+
+def push
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.push["h","i","t"] #shin에 h,i,t을 추가해줌.
+end
+
+def detect
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.detect{|x|x=="i"} #shin에서 detect 조건에 맞는 것을 찾아줌.
+end
+
+def shift
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.shift(i) #shin에서 처음부터 i까지의 값을 삭제함.
+end
+
+def unshift
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.unshift(k) #shin의 처음에 k를 추가함.
+end
+
+def shuffle
+  shin = ["c","r","i","t","i","c","a","l"]
+  puts shin.shuffle #shin의 순서를 랜덤하게 섞어줌.
+end
+
+def collect
+  shin = [3,6,9]
+  puts shin.collect{|x|x+=2} #shin안에 있는 각각의 요소를 콜랙트의 조건에따라 편집하여준다.
+end
+
+def times
+  shin = "critical"
+  puts 3.times "#{critical}" #shin을 x.times 의 x회 반복시킴.
+end
+
+def max
+  shin = [1...100]
+  puts shin.max #shin안의 최댓값을 찾아줌.
+end
+
+def min
+  shin = [1...100]
+  puts shin.min #shin안의 최솟값을 찾아줌.
 end
 #여기 이 두 주석 사이에 메소드를 작성하시면 됩니다~
 
