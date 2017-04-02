@@ -133,18 +133,18 @@ end
 
 =begin
 def _hash
-
   my_hash = { :key1=>value1,
               :key2=>value2,
               :key3=>value3
-            }
-  my_hash_Hash.new
-  my_hash["key4"] = value4
-  my_hash["key5"] = value5
-  my_hash["key6"] = value6
+              }
+  value1 = "miyeon"
+  value2 = "please"
+  value3 = "godblessyou"
   puts my_hash
 end
 =end
+#(이건 내일 물어볼게 ㅠㅠ )
+
 
 def _select
   hong = {a:100, b: 90, c:80, d:0}
@@ -182,15 +182,12 @@ def _downto
   #=> 10 9 8 7 6 5 4 3 2 1 10
 end
 
-=begin
 def _respond_to? #메소드의 사용 여부를 논리값으로 반환
-  [1,2,3,4,5,6,7,8,9,0]._respond_to?(:push)
-  [1,2,3,4,5,6,7,8,9,0]._respond_to?(:to_sym)
-  #=>
-  #=>
+  puts [1,2,3,4,5,6,7,8,9,0].respond_to?(:push)
+  puts [1,2,3,4,5,6,7,8,9,0].respond_to?(:to_sym)
+  #=> true
+  #=> false
 end
-
-=end
 
 def _collect
   hong = ["1","2","3","4","5"] #배열의 전체 요소에 코드를 적용시킬 때 사용한다.
@@ -204,12 +201,12 @@ def _map
   #=>    2 33 444 5555
 end
 
-=begin
 def _floor
-  hong =(8.234).floor(8) # 해당 숫자보다 작은 정수중에서 가장 큰 정수를 반환하며 인자와 함께 넘겨줄 경우 소수점자리까지 적용된다.
+  hong =(8.234).floor # 해당 숫자보다 작은 정수중에서 가장 큰 정수를 반환하며 인자와 함께 넘겨줄 경우 소수점자리까지 적용된다.
   puts hong
+  #=> 8
 end
-=end
+
 
 def _object
   puts "seonhong".is_a? Symbol
