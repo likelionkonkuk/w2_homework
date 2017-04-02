@@ -45,6 +45,75 @@ end
 def cheers
   puts "beers! yeah!"
 end
+
+def sangdae_length #배열이나 문자열의 길이를 측정하는 메소드 
+  a = [3,5,7]
+  b = "sangdae"
+  puts a.length
+  puts b.length
+end
+# => 3
+# => 7
+
+def sangdae_reverse #문자열을 뒤집고 싶을때 사용 
+  a = "sangdae"
+  puts a.reverse
+end
+# =>
+
+def sangdae_upcase #문자열을 대문자로 
+  a = "sangdae"
+  puts a.upcase
+end
+
+def sangdae_downcase #문자열을 소문자로 
+  a = "SANGDAE"
+  puts a.downcase
+end
+
+def sangdae_capitalize #첫 단어만 대문자로 
+  a = "sangdae"
+  puts a.capitalize
+end
+
+def sangdae_include #해당 단어 포함 여부
+  a = "sangdae"
+  puts a.include? "a"
+  puts a.include? "f"
+end
+
+def sangdae_gsub #문자열 속 해당 단어 변환
+  a = "sangdae"
+  puts a.gsub(/a/, "u")
+end
+
+def sangdae_split #문자열 나누기
+  a = "sang dae"
+  b = "sangdae"
+  puts a.split 
+  puts b.split
+end
+
+place1 = "삼청동" #여기도 왜 안될까요...ㅠㅠ
+place2 = "명동"
+place3 = "인사동"
+def date_place (place)
+  puts "#{place}"
+end
+date_place(place1) 
+date_place(place2) 
+date_place(place3) 
+
+def who_loves_sangdae #왜 안될까요...ㅠㅠ 
+  return "yougeine"
+end
+who_loves_sangdae
+
+def love_sangdae
+  puts "yougeine"
+end
+
+
 #여기 이 두 주석 사이에 메소드를 작성하시면 됩니다~
 
 puts "==================================="
