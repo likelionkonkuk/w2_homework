@@ -49,71 +49,86 @@ end
 def _length
   hong = "seonhong" #문자열의 길이를 알고 싶을 때 사용한다.
   puts hong.length
+  # => 8
 end
 
 def _reverse
   hong = "seonhong"
   puts hong.reverse # 문자열을 뒤집고 싶을 때 사용한다.
+  # => gnohnoes
 end
 
 def _upcase
   hong = "seonhong"
   puts hong.upcase # 문자열을 대문자로 바꾸어준다.
+  #=> SEONHONG
 end
 
 def _downcase
   hong = "SEONHONG"
   puts hong.downcase # 문자열을 소문자로 바꾸어준다.
+  #=> seonhong
 end
 
 def _capitalize
   hong = "seonhong"
-  puts hong_capitalize # 첫 글자를 대문자로 나머지 글자는 소문자로 바꿔준다.
+  puts hong.capitalize # 첫 글자를 대문자로 나머지 글자는 소문자로 바꿔준다.
+  #=> Seonhong
 end
 
 def _include?
   hong = "seonhong"
   puts hong.include? "d" #해당 문자를 포함하는지를 아닌지를 boolean 값으로 알려준다.
+  #=> false
 end
 
 def _gsub
   hong = "seonhong"
   puts hong.gsub(/e/,"a") #해당 문자를 다른 문자로 바꿔준다.
+  #=> saonhong
 end
 
 def _split
   hong = "seon hong"
   puts hong.split # 문자열을 띄어쓰기 전후로 분리해서 배열을 만들어준다.
+  #=> seon
+  #=> hong
 end
 
 def _index
   hong = [1,2,3,4,5]
   puts hong[1] #인덱스 값을 불러주면 해당 위치에 있는 요소를 불러줌
+  #=> 2
 end
 
 def _push
   hong = [1,2,3,4,5]
   puts hong.push(6) #배열에 요소 추가하기
+  #=> 1,2,3,4,5,6
 end
 
 def _unshift
   hong = [1,2,3,4,5]
   puts hong.unshift(0) # 배열의 시작부분에 요소 추가하기
+  #=> 0,1,2,3,4,5
 end
 
 def _shift
   hong = [1,2,3,4,5]
   puts hong.shift(4) # 배열의 요소 삭제하기 앞에서부터 값에 해당하는 것 까지 삭제함 따라서 5가 삭제됌
+  #=> 1,2,3,4
 end
 
 def _pop
   hong = [1,2,3,4,5]
   puts hong.pop(3) #뒤에서 인자에 해당하는 수만큼 제거
+  #=> 3,4,5
 end
 
 def _sort
   hong = [1,305,23,4,6]
   puts hong.sort!# 정렬하기, 변수에 메소드를 적용할 경우 그 변경된 값은 사본에 저장되지만 !를 써줄 경우 변경된 값이 원본에 저장된다.
+  #=> 1,4,6,23,305
 end
 
 =begin
@@ -133,57 +148,78 @@ end
 
 def _select
   hong = {a:100, b: 90, c:80, d:0}
-  hong.select{|name,hong| hong < 90} #해쉬 안에 있는 값에 조건을 줘서 걸러낼 수 있다.
-  puts hong
+  puts hong.select{|name,hong| hong < 90} #해쉬 안에 있는 값에 조건을 줘서 걸러낼 수 있다.
+
+  #=>{:80, :d=0}
 end
 
 def _key
   hong = {a:100, b: 90, c:80, d:0}
   hong.each_key{|key| puts key} # 키값만 뽑아내기
+  #=> a,b,c,d
 end
 
 def _value
   hong = {a:100, b: 90, c:80, d:0}
   hong.each_value{|key| puts key} # 값만 뽑아내기
+  #=> 100,90,80,0
 end
 
 def _delete
   hong = {a:100, b: 90, c:80, d:0}
   puts hong.delete(:a) #이러면 100만 나옴 해시를 통해 키-값쌍을 제거하기
   puts hong
+  #=> {:b=>90, :c=>80, :d=>0}
 end
 
 def _upto
   puts 1.upto(10){|i| print i," "} #하나씩 더해서 출력하기
+  #=> 1 2 3 4 5 6 7 8 9 10 1
 end
 
 def _downto
   puts 10.downto(1){|i| print i, " "} # 하나씩 빼면서 출력하기
+  #=> 10 9 8 7 6 5 4 3 2 1 10
 end
 
+=begin
 def _respond_to? #메소드의 사용 여부를 논리값으로 반환
   [1,2,3,4,5,6,7,8,9,0]._respond_to?(:push)
   [1,2,3,4,5,6,7,8,9,0]._respond_to?(:to_sym)
+  #=>
+  #=>
 end
+
+=end
 
 def _collect
   hong = ["1","2","3","4","5"] #배열의 전체 요소에 코드를 적용시킬 때 사용한다.
   puts hong.collect{|x| x + "!"}
+  #=> 1! 2! 3! 4! 5!
 end
 
 def _map
   hong = ["1","2","3","4","5"]
   puts hong.map.with_index{|x,i| x *i} # _collect와 같다
+  #=>    2 33 444 5555
 end
 
+=begin
 def _floor
-  hong =(10200304040.20303030).floor(4) # 해당 숫자보다 작은 정수중에서 가장 큰 정수를 반환하며 인자와 함께 넘겨줄 경우 소수점자리까지 적용된다.
+  hong =(8.234).floor(8) # 해당 숫자보다 작은 정수중에서 가장 큰 정수를 반환하며 인자와 함께 넘겨줄 경우 소수점자리까지 적용된다.
+  puts hong
 end
+=end
 
 def _object
   puts "seonhong".is_a? Symbol
   puts "seonhong".is_a? String
   puts "seonhong".is_a? Integer
+
+#=> false
+#=> true
+#=> false
+
 end
 
 
