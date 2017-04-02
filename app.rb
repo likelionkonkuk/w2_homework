@@ -98,7 +98,7 @@ place1 = "삼청동" #여기도 왜 안될까요...ㅠㅠ
 place2 = "명동"
 place3 = "인사동"
 def date_place (place)
-  puts "#{place}"
+  puts place
 end
 date_place(place1) 
 date_place(place2) 
